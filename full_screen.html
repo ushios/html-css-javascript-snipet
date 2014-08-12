@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>Full screen and grid.</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+<style>
+
+</style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-12">
+        <img src="http://lorempixel.com/g/500/400/" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="">
+            <img src="http://lorempixel.com/g/500/200/" />
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="">
+            <img src="http://lorempixel.com/g/500/200/" />
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="">
+            <img src="http://lorempixel.com/g/500/200/" />
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript">
+    var resizeAllImages = function(){
+        console.log('resize');
+        $('img').each(function(){
+
+            var image = $(this);
+            console.log(image);
+            var parent = $(image.parent().get(0));
+
+            image.width(parent.width());
+
+        });
+    }
+
+    $('body').resize(resizeAllImages());
+    resizeAllImages();
+</script>
+</html>
